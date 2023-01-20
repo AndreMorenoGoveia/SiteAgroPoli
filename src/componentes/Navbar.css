@@ -1,0 +1,55 @@
+.Nav {
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+
+    background-color: #343E3D;
+    height: 100px;
+
+}
+
+.atual {
+
+    /* Espaço */
+    width: 300px;
+    height: 100px;
+    flex-shrink: 0;
+    
+    /* Letra */
+    font-family: Arial;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 50px #49ff18, 0 0 75px #49ff18;
+
+    
+
+}
+
+.naoAtual {
+
+    /* Espaço */
+    width: 300px;
+    height: 100px;
+    flex-shrink: 0;
+    
+    /* Letra */
+    font-family: Arial;
+    color: white;
+
+    /* Interior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nome {
+
+    display: inline;
+    
+
+}
+
