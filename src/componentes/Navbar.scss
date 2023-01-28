@@ -1,0 +1,153 @@
+.Nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+
+    background-color: #343E3D;
+    height: 100px;
+
+}
+
+.atual {
+
+    /* Espaço */
+    width: 300px;
+    height: 100px;
+    flex-shrink: 0;
+    
+    /* Letra */
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 10px yellow;
+
+    /* Interior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.naoAtual {
+
+    /* Espaço */
+    width: 300px;
+    height: 100px;
+    flex-shrink: 0;
+    
+    /* Letra */
+    font-family: Arial;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+
+    /* Interior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nomeNaoAtual:hover {
+
+    color: lightgrey;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+
+
+}
+
+
+.nomeAtual, .nomeNaoAtual{
+
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.nomeAtual:hover {
+
+    color: white;
+    text-shadow: 0 0 20px yellow;
+    cursor: pointer;
+
+}
+
+
+/* Particulas */
+.particula {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+  }
+
+@for $i from 1 through 20 {
+
+    .particula:nth-child(#{$i}) {
+
+
+        animation: anima#{$i} 4s linear infinite;
+        animation-delay: $i*-.5s;
+
+    }
+
+    $sinalx: if(random() > 0.5, random(), random() * -1);
+    $sinaly: if(random() > 0.5, random(), random() * -1);
+
+    @keyframes anima#{$i} {
+        0% {
+          transform: translate(0, 0);
+          background: white;
+          box-shadow: 0 0 10px yellow;
+        }
+        80% {
+          transform: translate($sinalx*100px, $sinaly*100px);
+          opacity: 0;
+        }
+        100% {
+        opacity: 0;
+        }
+      }
+
+}
+
+.particulaExplosiva {
+
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 100%;
+    
+}
+
+@for $i from 1 through 7000 {
+
+    .particulaExplosiva:nth-child(#{$i}){
+
+
+        animation: animaExp#{$i} 2s linear;
+
+    }
+
+    $sinalx: if(random() > 0.5, random(), random() * -1);
+    $sinaly: if(random() > 0.5, random(), random() * -1);
+
+    @keyframes animaExp#{$i} {
+        from {
+        transform: translate($sinalx*10px, 0);
+        background: white;
+        box-shadow: 0 0 10px yellow;
+        }
+        to {
+        transform: translate($sinalx*100px, $sinaly*100px);
+        opacity: 0;
+        }
+    }
+
+}

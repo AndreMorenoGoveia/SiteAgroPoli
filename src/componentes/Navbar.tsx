@@ -1,4 +1,5 @@
-import './Navbar.css'
+import React from 'react';
+import './Navbar.scss';
 
 type NomesProps = {
 
@@ -7,36 +8,65 @@ type NomesProps = {
 
 }
 
-export function Navbar({index, nomes} : NomesProps) {
+export function Navbar(props : NomesProps) {
+    
+    /* Lida com qual botão está ativado */
+    const [indexAtual, setIndexAtual] = React.useState(props.index);
 
-    let i : number;
-    let tamanho : number = nomes.length;
+    /* Lida com as particulas */
 
-    let elementojsx : React.ReactNode[] = [];
+    let particulas : React.ReactNode[] = []
+    let particulasExplosivas : React.ReactNode[] = []
 
-    for(i = 0; i < tamanho; i++){
 
-        if(i == index){
+    const [filaParticulas, setFilaParticulas] = React.useState<React.ReactNode[]>([]);
+    
 
-            elementojsx.push(<div className="atual">
-                                <div className="nome">{nomes[i]}</div>
-                            </div>)
-
-        }
-        else {
-
-            elementojsx.push(<div className="naoAtual">
-                                <div className="nome">{nomes[i]}</div>
-                            </div>)
-
-        }
-
+    for(let i = 0; i < 20; i++){
+        particulas.push(<div className="particula"/>)
     }
 
-    let retorno = <div className="Nav">{elementojsx}</div>;
+    for(let i = 0; i < 70; i++){
+        particulasExplosivas.push(<div className="particulaExplosiva"/>)
+    }
+    const handleClick = () => {
+        setFilaParticulas(prevFila => [...prevFila, ...particulasExplosivas]);
+        setTimeout(() => {
+            if(filaParticulas.length >= 7000){
+                setFilaParticulas(prevFila => prevFila.slice(70));
+            }
+        }, 2000);
+    };
+    
+ 
 
+    return (<div className="Nav">
+        {props.nomes.map((nome, index: number) => {
 
+        if(indexAtual == index)
+            return (<div className="atual">
+                        <div className="nomeAtual"
+                             onClick={handleClick} >
+                            {nome}
+                            {particulas}
+                            {filaParticulas}
+                        </div>
+                    </div>)
 
-    return retorno;
+        else 
+            return (<div className="naoAtual">
+                        <div className="nomeNaoAtual" onClick={() => {
+                                /* Muda o botão */
+                                setIndexAtual(index);
+                                /* Particulas */
+                                setFilaParticulas([]);
+                                handleClick();
+                            }}>
+                                {nome}
+                        </div>
+                    </div>)
+
+        })}
+    </div>);
 
 }
