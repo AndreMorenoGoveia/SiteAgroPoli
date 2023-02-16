@@ -32,9 +32,8 @@ export function Navbar(props : NomesProps) {
     const handleClick = () => {
         setFilaParticulas(prevFila => [...prevFila, ...particulasExplosivas]);
         setTimeout(() => {
-            if(filaParticulas.length >= 7000){
-                setFilaParticulas(prevFila => prevFila.slice(70));
-            }
+            if(filaParticulas.length > 6000)
+                setFilaParticulas(prevFila => prevFila.slice(1000))
         }, 2000);
     };
     
@@ -58,8 +57,8 @@ export function Navbar(props : NomesProps) {
                         <div className="nomeNaoAtual" onClick={() => {
                                 /* Muda o botão */
                                 setIndexAtual(index);
-                                /* Particulas */
                                 setFilaParticulas([]);
+                                /* Particulas */
                                 handleClick();
                             }}>
                                 {nome}

@@ -1,4 +1,5 @@
 import '../../styles/RPG.css'
+import { Corpo } from '../componentes/Corpo';
 import { Navbar } from '../componentes/Navbar'
 
 
@@ -15,7 +16,10 @@ export function RPG () {
 
     return (
             /* Barra de Navegação */
+            <>
             <Navbar index={perfil.index} nomes={perfil.nomes} />
+            <Corpo/>
+            </>
             )
 
 }
