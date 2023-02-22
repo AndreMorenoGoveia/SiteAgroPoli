@@ -1,4 +1,6 @@
 import './Corpo.scss'
+import esferas from '../dados/esferas.json'
+import React from 'react'
 
 type Node = {
 
@@ -9,20 +11,38 @@ type Node = {
 
 }
 
-export function Corpo() {
+export let total = esferas[0].filhos.length;
 
-    let tamanho = 8;
-    let circulos : React.ReactNode[] = []
-    for(let i = 0; i < tamanho; i++){
+export function Corpo () {
 
-        circulos.push(<li>Ola</li>)
+    let listaBolasInicial: React.ReactNode[] = [];
+    let ondas: React.ReactNode[] = [];
 
+    let total = esferas[0].filhos.length;
+
+    if(total == 1){
+        listaBolasInicial = [<div className="bola" style={{
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)'
+        }}/>];
     }
+    else{
+
+        for(let i = 0; i < total; i++){
+            listaBolasInicial.push(<div className="bola" style={{animationDelay: `${i*(15/total)}s`}}>
+                                        <div className="explode" style={{animationDelay: `${i*(15/total)*1000 + 100}ms`}}/>
+                                    </div>);
+        }
+    }
+    const [listaBolas, setListaBolas] = React.useState<React.ReactNode[]>(listaBolasInicial);
+    
+
 
     return (<div className="Corpo">
-                <ul className="Centro">
-                    {}
-                </ul>
+                <div className="Centro">
+                    {listaBolas}
+                </div>
             </div>)
 
 }

@@ -31,10 +31,9 @@ export function Navbar(props : NomesProps) {
     }
     const handleClick = () => {
         setFilaParticulas(prevFila => [...prevFila, ...particulasExplosivas]);
-        setTimeout(() => {
-            if(filaParticulas.length > 6000)
-                setFilaParticulas(prevFila => prevFila.slice(1000))
-        }, 2000);
+        if(filaParticulas.length > 6000)
+            setFilaParticulas(prevFila => prevFila.slice(1000));
+        
     };
     
  

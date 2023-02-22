@@ -1,41 +1,9 @@
-/* Função círculo */
-@mixin on-circle($item-count, $circle-size, $item-size) {
-    position: relative;
-    width:  $circle-size;
-    height: $circle-size;
-    padding: 0;
-    border-radius: 50%; 
-    list-style: none;       
-    
-    > * {
-      display: block;
-      position: absolute;
-      top:  50%; 
-      left: 50%;
-      width: $item-size;
-      height: $item-size;
-      margin: calc((-1)*($item-size / 2));
-    
-      $angle: calc(360 / $item-count);
-      $rot: 0;
-  
-      @for $i from 1 through $item-count {
-        &:nth-of-type(#{$i}) {
-          transform: 
-            rotate(calc($rot * 1deg)) 
-            translate(calc($circle-size / 2)) 
-            rotate(calc($rot * -1deg));
-        }
-  
-        $rot: $rot + $angle;
-      }
-    }
-  }
-
-
 .Corpo{
 
-    background-image: url('../../background.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../background.jpg');
     background-size: cover;
     height: 100vh;
     overflow: hidden;
@@ -44,11 +12,94 @@
 
 .Centro {
 
-    @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6em); 
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0px;
 
-    li{
-        display: block;
-        background-color: yellow;
+}
+
+.bola {
+
+    position: relative;
+    border-radius: 50%;
+    filter: brightness(150%);
+    background: radial-gradient(circle,#cacaca  0%,#b09500  70%, #000 100%);
+    border: 0px;
+    left: -250px;
+    border-radius: 50%;
+    transform-origin: 250px;
+    animation: roda 15s linear infinite, pulsa 800ms linear infinite, expande 100ms linear both;
+
+}
+
+.explode {
+
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    border-radius: 50%;
+    border: 20px solid;
+    border-color: #ffd900b9;
+    filter: brightness(150%);
+    background: #00000000;
+    animation: explosao 5s linear;
+
+}
+
+@keyframes roda {
+
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
     }
 
 }
+
+@keyframes pulsa {
+    0% {
+      box-shadow: 0 0 10px #ffd900;
+    }
+    50% {
+      box-shadow: 0 0 20px #ffd900;
+    }
+    100% {
+      box-shadow: 0 0 10px #ffd900;
+    }
+  }
+
+  @keyframes expande {
+
+    from {
+        height: 0px;
+        width: 0px;
+    }
+
+    to{
+        height: 100px;
+        width: 100px;
+    }
+
+  }
+
+  @keyframes explosao {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        width: 6000px;
+        height: 6000px;
+    }
+
+  }
+  

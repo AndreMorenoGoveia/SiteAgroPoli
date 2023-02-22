@@ -15,10 +15,9 @@ export function RPG () {
 
 
     return (
-            /* Barra de Navegação */
             <>
-            <Navbar index={perfil.index} nomes={perfil.nomes} />
-            <Corpo/>
+                <Navbar index={perfil.index} nomes={perfil.nomes} />
+                <Corpo/>
             </>
             )
 
