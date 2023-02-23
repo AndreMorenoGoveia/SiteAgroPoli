@@ -1,49 +1,76 @@
 .Corpo{
 
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-image: url('../../background.jpg');
     background-size: cover;
-    height: 100vh;
+
+    height: 85vh;
+    width: 100vw;
     overflow: hidden;
 
 }
 
-.Centro {
+.Centro{
 
-    position: relative;
-    width: 0;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0px;
+    display: inline;
+
+    height: 0px;
+    width: 0px;
+    overflow: visible;
 
 }
 
+
 .bola {
 
-    position: relative;
+    position: absolute;
     border-radius: 50%;
     filter: brightness(150%);
     background: radial-gradient(circle,#cacaca  0%,#b09500  70%, #000 100%);
-    border: 0px;
-    left: -250px;
+
+    animation: pulsa 800ms linear infinite, expande 100ms linear both;
+
+    cursor: pointer;
+    transition: 0.15s;
+    
+}
+
+.bolagirando {
+
+    left:35vw;
+    transform-origin:15vw;
+    position: absolute;
+
     border-radius: 50%;
-    transform-origin: 250px;
-    animation: roda 15s linear infinite, pulsa 800ms linear infinite, expande 100ms linear both;
+    filter: brightness(150%);
+    background: radial-gradient(circle,#cacaca  0%,#b09500  70%, #000 100%);
+
+    animation: roda 10s linear infinite, pulsa 800ms linear infinite, expande 100ms linear both;
+    cursor: pointer;
+
+    transition: 0.15s;
+
+}
+
+.bolagirando:hover {
+
+    filter: brightness(200%);
 
 }
 
 .explode {
 
-    position: absolute;
+    position: relative;
     left: 50%;
     top:50%;
     transform: translate(-50%, -50%);
     
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     opacity: 0;
     border-radius: 50%;
     border: 20px solid;

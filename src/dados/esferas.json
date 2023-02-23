@@ -1,18 +1,15 @@
 [
     {
-        "id": 1,
         "titulo": "André",
         "descricao": null,
-        "svg": null,
-        "filhos": [2, 3]
+        "icon": null,
+        "filhos": [2, 3, 4]
     },
     {
-        "id": 2,
         "titulo": "Gestão",
         "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
-        "svg": null,
+        "icon": null,
         "filhos": [4, 5]
-
     },
     {
         "id": 3,

@@ -7,7 +7,7 @@
 
 
     background-color: #343E3D;
-    height: 100px;
+    height: 15vh;
 
 }
 
@@ -67,6 +67,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: 0.3s;
 
 }
 
@@ -151,3 +152,29 @@
     }
 
 }
+
+
+/* ScrollBar */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #faffb3 #26312b;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    height: 1.5vh;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #26312b;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f7ff8b82;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px yellow;;
+    border: none;
+    filter: brightness(400%);
+  }

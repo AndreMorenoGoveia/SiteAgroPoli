@@ -11,38 +11,39 @@ type Node = {
 
 }
 
-export let total = esferas[0].filhos.length;
+let index = 0;
+let total = esferas[0].filhos.length;
 
 export function Corpo () {
 
     let listaBolasInicial: React.ReactNode[] = [];
-    let ondas: React.ReactNode[] = [];
+    const [estadoSelecionado, setEstadoSelecionado] = React.useState(false); 
 
     let total = esferas[0].filhos.length;
 
     if(total == 1){
-        listaBolasInicial = [<div className="bola" style={{
-                left: '50%',
-                top: '50%',
-                transform: 'translate(-50%, -50%)'
-        }}/>];
+        listaBolasInicial = [<div className="bola" >
+                                <div className="explode"/>
+                            </div>];
     }
     else{
 
         for(let i = 0; i < total; i++){
-            listaBolasInicial.push(<div className="bola" style={{animationDelay: `${i*(15/total)}s`}}>
-                                        <div className="explode" style={{animationDelay: `${i*(15/total)*1000 + 100}ms`}}/>
+            listaBolasInicial.push(<div className="bolagirando" style={{animationDelay: `${i*(10/total)}s`}}>
+                                        <div className="explode" style={{animationDelay: `${i*(10/total)*1000 + 100}ms`}}/>
+                                        
                                     </div>);
         }
     }
     const [listaBolas, setListaBolas] = React.useState<React.ReactNode[]>(listaBolasInicial);
-    
+    //<GrTechnology size="600px"/>
 
 
     return (<div className="Corpo">
-                <div className="Centro">
-                    {listaBolas}
-                </div>
+                
+                   {/*esferas[index].titulo*/}
+                   {listaBolas}
+                  
             </div>)
 
 }
