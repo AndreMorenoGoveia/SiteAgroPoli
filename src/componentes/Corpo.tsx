@@ -1,6 +1,7 @@
 import './Corpo.scss'
 import esferas from '../dados/esferas.json'
 import React from 'react'
+import { Icone } from '../Auxiliares/Icone';
 
 type Node = {
 
@@ -12,14 +13,14 @@ type Node = {
 }
 
 let index = 0;
-let total = esferas[0].filhos.length;
+let total = esferas[index].filhos.length;
 
 export function Corpo () {
 
     let listaBolasInicial: React.ReactNode[] = [];
     const [estadoSelecionado, setEstadoSelecionado] = React.useState(false); 
 
-    let total = esferas[0].filhos.length;
+    let total = esferas[index].filhos.length;
 
     if(total == 1){
         listaBolasInicial = [<div className="bola" >
@@ -31,7 +32,7 @@ export function Corpo () {
         for(let i = 0; i < total; i++){
             listaBolasInicial.push(<div className="bolagirando" style={{animationDelay: `${i*(10/total)}s`}}>
                                         <div className="explode" style={{animationDelay: `${i*(10/total)*1000 + 100}ms`}}/>
-                                        
+                                        {/* <Icone nomeIcone="FaReact"/> */}
                                     </div>);
         }
     }
@@ -40,8 +41,7 @@ export function Corpo () {
 
 
     return (<div className="Corpo">
-                
-                   {/*esferas[index].titulo*/}
+            
                    {listaBolas}
                   
             </div>)
