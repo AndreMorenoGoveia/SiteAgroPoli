@@ -1,0 +1,15 @@
+.Icone {
+
+    opacity: 0;
+
+    animation: aparece 10ms linear both;
+}
+
+
+@keyframes aparece {
+
+    from {opacity: 0;}
+
+    to {opacity: 1;}
+
+}

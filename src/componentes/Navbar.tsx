@@ -1,17 +1,15 @@
 import React from 'react';
 import './Navbar.scss';
+import users from '../dados/users.json'
 
-type NomesProps = {
+type UserProps = {
 
-    index: number;
-    nomes: string[];
+    userAtual : number,
+    setUserAtual : (index :number) => void
 
 }
 
-export function Navbar(props : NomesProps) {
-    
-    /* Lida com qual botão está ativado */
-    const [indexAtual, setIndexAtual] = React.useState(props.index);
+export function Navbar({userAtual, setUserAtual} : NomesProps) {    
 
     /* Lida com as particulas */
 
@@ -39,13 +37,13 @@ export function Navbar(props : NomesProps) {
  
 
     return (<div className="Nav">
-        {props.nomes.map((nome, index: number) => {
+        {users.map((user) => {
 
-        if(indexAtual == index)
+        if(userAtual == user.index)
             return (<div className="atual">
                         <div className="nomeAtual"
                              onClick={handleClick} >
-                            {nome}
+                            {user.nome}
                             {particulas}
                             {filaParticulas}
                         </div>
@@ -55,12 +53,12 @@ export function Navbar(props : NomesProps) {
             return (<div className="naoAtual">
                         <div className="nomeNaoAtual" onClick={() => {
                                 /* Muda o botão */
-                                setIndexAtual(index);
+                                setUserAtual(user.index);
                                 setFilaParticulas([]);
                                 /* Particulas */
                                 handleClick();
                             }}>
-                                {nome}
+                                {user.nome}
                         </div>
                     </div>)
 
