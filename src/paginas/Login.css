@@ -137,6 +137,8 @@
     position: absolute;
     top: -25vh;
     user-select: none;
+    left: auto;
+    right: auto;
 
     font-size: 15vh;
     color: #CB4456;
@@ -148,6 +150,7 @@
 
     color: #CB4456;
     text-shadow: 0 0 10px red;
+    user-select: none;
 
 }
 

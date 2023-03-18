@@ -29,7 +29,8 @@ export function Corpo ({userAtual}:UserProps) {
     /* Efeito de mudar o usuário */
     React.useEffect(() => {
 
-        setCamada((prevCamada) => camadaInicial)
+        setCamada((prevCamada) => camadaInicial);
+        setEsferaSelecionada((prevEsfera) => camadaInicial);
 
     }, [userAtual])
 
