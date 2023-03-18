@@ -36,6 +36,10 @@
 
     cursor: pointer;
     transition: 0.15s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -62,10 +66,8 @@
 
 }
 
-.bolagirando:hover {
-
+.bolagirando:hover, .bola:hover {
     filter: brightness(200%);
-
 }
 
 .explode {
@@ -179,6 +181,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -197,13 +200,74 @@
 }
 
 
-.titulo {
-
-    position: relative;
-    top:50%;
-    left: 50%;
+.tituloEsfera {
 
     color: white;
-    font-size: large;
+    font-size: 7vh;
+    font-family: Arial;
+    text-shadow: 0 0 5px yellow;
+
+    margin-bottom: 5vh;
+
+    user-select: none;
+
+}
+
+.descricaoEsfera {
+
+    color: white;
+    font-size: 3vh;
+    font-family: Arial;
+    text-shadow: 0 0 5px lightblue;
+    text-align: justify;
+
+    max-width: 20vw;
+    margin-bottom: 10vh;
+
+    user-select: none;
+
+}
+
+.historico {
+
+    color: white;
+    font-size: 3vh;
+    font-family: Arial;
+    text-shadow: 0 0 5px yellow;
+
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 2vh;
+    margin-right: 2vw;
+
+    display: flex;
+
+    cursor: pointer;
+
+
+}
+.historico:hover {
+
+    filter: brightness(150%);
+
+}
+
+.bolinha {
+
+    border-radius: 50%;
+    filter: brightness(150%);
+    background: radial-gradient(circle,#cacaca  0%,#b09500  70%, #000 100%);
+    height: 3vh;
+    width: 3vh;
+
+    margin-right: .5vw;
+
+}
+
+.historicoContainer {
+
+    display: flex;
+    flex-direction: column;
 
 }

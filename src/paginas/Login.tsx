@@ -31,7 +31,7 @@ export function Login() {
 
     return (<div className="Fundo">
                 <div className="dados">
-                    <div className="titulo">RPG</div>
+                    <div className="tituloRPG">RPG</div>
                     <div className="senhaIncorreta" style={{opacity: senhaIncorreta ? 1 : 0}}>*Usuario ou senha incorretos</div>
                     <input className="usuario" type="text" placeholder="E-mail" onChange={handleInputChangeUsuario}></input>
                     <input className="senha" type="password" placeholder="Senha" onChange={handleInputChangeSenha}></input>
