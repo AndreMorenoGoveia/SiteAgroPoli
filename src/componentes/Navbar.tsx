@@ -9,7 +9,7 @@ type UserProps = {
 
 }
 
-export function Navbar({userAtual, setUserAtual} : NomesProps) {    
+export function Navbar({userAtual, setUserAtual} : UserProps) {    
 
     /* Lida com as particulas */
 

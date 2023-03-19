@@ -41,7 +41,7 @@ export function Corpo ({userAtual}:UserProps) {
                                 setEsferaSelecionada(camadaAnterior)
                                 setCamada(camadaAnterior)
                                 setVisual([])
-                                setHistorico((prevHistorico) => prevHistorico.slice(0, historico.length - 1))
+                                setHistorico((prevHistorico) => prevHistorico.slice(0, historico.length))
                                 }
                                 }>
                             <div className="bolinha" />
@@ -58,6 +58,7 @@ export function Corpo ({userAtual}:UserProps) {
         setVisual([])
         setCamada((prevCamada) => camadaInicial);
         setEsferaSelecionada((prevEsfera) => camadaInicial);
+        setHistorico([])
 
     }, [userAtual])
 
@@ -85,10 +86,12 @@ export function Corpo ({userAtual}:UserProps) {
 
             if(filhosCamada.length == 1){
                 let esferaFilho = esferas.filter((esfera) => esfera.id == dadosCamada.filhos[0])[0]
-                setVisual([<div className="bola" >
+                setVisual([<div className="bola" onClick={() => {
+                                                                setEsferaSelecionada(esferaFilho.id);
+                                                                }}>
                                 <div className="explode"/>
                                 <Icone animationDelay={0} iconName={esferaFilho.icon}/>
-                            </div>, <div className="historicoContianer"> {historico} </div>])
+                            </div>, <div className="historicoContainer"> {historico} </div>])
             }
             else {
                 setVisual([filhosCamada.map((filho, i) => {
@@ -105,7 +108,7 @@ export function Corpo ({userAtual}:UserProps) {
                                 </div>
                             </div>)
 
-                }), <div className="historicoContianer"> {historico} </div>])
+                }), <div className="historicoContainer"> {historico} </div>])
             }
 
         }

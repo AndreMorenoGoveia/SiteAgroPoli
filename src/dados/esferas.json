@@ -24,14 +24,25 @@
         "id":4,
         "titulo": "Liderança",
         "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
-        "icon": "FaAcquisitionsIncorporated",
-        "filhos": [9, 10]
+        "icon": "GiChatBubble",
+        "filhos": [9]
     },
     {
         "id":5,
         "titulo": "Comunicaçao",
         "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
         "icon": "FaAcquisitionsIncorporated",
+        "linksRecomendados": [{ "tituloLink": "Primo Pobre",
+                                "link": "https://www.youtube.com/@PrimoPobre"},
+                              { "tituloLink": "Jovem de negocios",  
+                                "link": "https://www.youtube.com/@jovensdenegocios"}],
         "filhos": [11, 12]
+    },
+    {
+        "id":9,
+        "titulo": "Sockets",
+        "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
+        "icon": "FaAccessibleIcon",
+        "filhos": [9, 10]
     }
 ]

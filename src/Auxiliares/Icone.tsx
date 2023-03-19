@@ -4,6 +4,9 @@ import * as ReactIconsGi from 'react-icons/gi';
 import * as ReactIconsIo from 'react-icons/io';
 import * as ReactIconsFi from 'react-icons/fi';
 import * as ReactIconsDi from 'react-icons/di';
+import * as ReactIconsAi from "react-icons/ai";
+import * as ReactIconsBs from "react-icons/bs";
+import * as ReactIconsBi from "react-icons/bi"
 import './Icone.scss'
 
 interface IconeProps {
@@ -29,6 +32,15 @@ export function Icone({iconName, animationDelay}: IconeProps) {
             return <Icon size={40} className='Icone' style={{animationDelay: `${animationDelay}s`}}/>
         case 'Di':
             Icon = ReactIconsDi[iconName as keyof typeof ReactIconsDi]
+            return <Icon size={40} className='Icone' style={{animationDelay: `${animationDelay}s`}}/>
+        case 'Ai':
+            Icon = ReactIconsAi[iconName as keyof typeof ReactIconsAi]
+            return <Icon size={40} className='Icone' style={{animationDelay: `${animationDelay}s`}}/>
+        case 'Bs':
+            Icon = ReactIconsBs[iconName as keyof typeof ReactIconsBs]
+            return <Icon size={40} className='Icone' style={{animationDelay: `${animationDelay}s`}}/>
+        case 'Bi':
+            Icon = ReactIconsBi[iconName as keyof typeof ReactIconsBi]
             return <Icon size={40} className='Icone' style={{animationDelay: `${animationDelay}s`}}/>
         default:
             Icon = ReactIconsFa['FaCloud']
