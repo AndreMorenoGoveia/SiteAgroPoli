@@ -21,11 +21,11 @@ export function Navbar({userAtual, setUserAtual} : UserProps) {
     
 
     for(let i = 0; i < 20; i++){
-        particulas.push(<div className="particula"/>)
+        particulas.push(<div className="particula" key={i}/>)
     }
 
     for(let i = 0; i < 70; i++){
-        particulasExplosivas.push(<div className="particulaExplosiva"/>)
+        particulasExplosivas.push(<div className="particulaExplosiva" key={i}/>)
     }
     const handleClick = () => {
         setFilaParticulas(prevFila => [...prevFila, ...particulasExplosivas]);
@@ -37,10 +37,10 @@ export function Navbar({userAtual, setUserAtual} : UserProps) {
  
 
     return (<div className="Nav">
-        {users.map((user) => {
+        {users.map((user, i) => {
 
         if(userAtual == user.index)
-            return (<div className="atual">
+            return (<div className="atual" key={i}>
                         <div className="nomeAtual"
                              onClick={handleClick} >
                             {user.nome}
@@ -50,7 +50,7 @@ export function Navbar({userAtual, setUserAtual} : UserProps) {
                     </div>)
 
         else 
-            return (<div className="naoAtual">
+            return (<div className="naoAtual" key={i}>
                         <div className="nomeNaoAtual" onClick={() => {
                                 /* Muda o botão */
                                 setUserAtual(user.index);

@@ -2,6 +2,7 @@ import './Corpo.scss'
 import esferas from '../dados/esferas.json'
 import React from 'react'
 import { Icone } from '../Auxiliares/Icone';
+import axios from 'axios';
 
 
 type UserProps = {
@@ -18,15 +19,15 @@ export function Corpo ({userAtual}:UserProps) {
 
     /* Esfera clicada */
     const [esferaSelecionada, setEsferaSelecionada] = React.useState(camadaInicial)
-    /* Esfera atual */
-    let esferaAtual = camadaInicial;
-    /* Esfera selecionada */
 
     /* Histórico */
     const [historico, setHistorico] = React.useState<React.ReactNode[]>([]);
 
     /* Visual */
     const [visual, setVisual] = React.useState<React.ReactNode[]>([]);
+
+
+    const [alternador, setAlternador] = React.useState(false);
 
 
     /* Botão muda camada */
@@ -43,7 +44,7 @@ export function Corpo ({userAtual}:UserProps) {
                                 setVisual([])
                                 setHistorico((prevHistorico) => prevHistorico.slice(0, historico.length))
                                 }
-                                }>
+                                } key={historico.length + 1}>
                             <div className="bolinha" />
                             {camadaAnterior == camadaInicial ? 'Início' : esferas.filter(
                                 (esfera) => esfera.id == camadaAnterior
@@ -59,6 +60,9 @@ export function Corpo ({userAtual}:UserProps) {
         setCamada((prevCamada) => camadaInicial);
         setEsferaSelecionada((prevEsfera) => camadaInicial);
         setHistorico([])
+        setAlternador((prevAlternador) => !prevAlternador)
+
+        //axios.get("http://127.0.0.1:3000/check").then((res) => console.log(res.data))
 
     }, [userAtual])
 
@@ -88,32 +92,31 @@ export function Corpo ({userAtual}:UserProps) {
                 let esferaFilho = esferas.filter((esfera) => esfera.id == dadosCamada.filhos[0])[0]
                 setVisual([<div className="bola" onClick={() => {
                                                                 setEsferaSelecionada(esferaFilho.id);
-                                                                }}>
+                                                                }} key={1}>
                                 <div className="explode"/>
                                 <Icone animationDelay={0} iconName={esferaFilho.icon}/>
-                            </div>, <div className="historicoContainer"> {historico} </div>])
+                            </div>, <div className="historicoContainer" key={1}> {historico} </div>])
             }
             else {
                 setVisual([filhosCamada.map((filho, i) => {
                     let delay = i*(10/filhosCamada.length)
                     let esferaFilho = esferas.filter((esfera) => esfera.id == filho)[0]
-                    console.log(esferaFilho)
-                    return (<div className="bolagirando" style={{animationDelay: `${delay}s`}} 
+                    return (<div className="bolagirando" style={{animationDelay: `${delay}s`}} key={i} 
                                  onClick={() => {
                                     setEsferaSelecionada(filho);
                                     }}>
                                 <div className="explode" style={{animationDelay: `${delay*1000 + 100}ms`}} />
-                                <div className="internoBola" style={{animationDelay: `${delay}s`}}>
-                                    <Icone animationDelay={delay} iconName={esferaFilho.icon}/>
+                                <div className="internoBola" style={{animationDelay: `${delay}s`}} >
+                                    <Icone animationDelay={delay} iconName={esferaFilho.icon} />
                                 </div>
                             </div>)
 
-                }), <div className="historicoContainer"> {historico} </div>])
+                }), <div className="historicoContainer" key={filhosCamada.length}>{historico} </div>])
             }
 
         }
 
-    }, [camada, esferaSelecionada, visual])
+    }, [camada, esferaSelecionada, alternador])
 
 
 
