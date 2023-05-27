@@ -1,8 +1,18 @@
 import './Corpo.scss'
-import esferas from '../dados/esferas.json'
 import React from 'react'
 import { Icone } from '../Auxiliares/Icone';
 import axios from 'axios';
+
+
+interface Esfera {
+    descricao: string;
+    linksRecomendados: string[];
+    icon: string;
+    titulo: string;
+    filhos: string[];
+    id: string;
+  }
+
 
 
 type UserProps = {
@@ -14,8 +24,13 @@ type UserProps = {
 export function Corpo ({userAtual}:UserProps) {
 
     /* Camada Inicial */
-    const camadaInicial = 1
+    const camadaInicial = "1"
     const [camada, setCamada] = React.useState(camadaInicial);
+
+
+
+    /* Esferas */
+    const [esferas, setEsferas] = React.useState<Esfera[]>([]);
 
     /* Esfera clicada */
     const [esferaSelecionada, setEsferaSelecionada] = React.useState(camadaInicial)
@@ -62,12 +77,17 @@ export function Corpo ({userAtual}:UserProps) {
         setHistorico([])
         setAlternador((prevAlternador) => !prevAlternador)
 
-        //axios.get("http://127.0.0.1:3000/check").then((res) => console.log(res.data))
+        axios.get("http://127.0.0.1:3001/check").then((res) => {setEsferas(res.data)
+                                                                
+                                                                console.log("Esferas")
+                                                                console.table(esferas)
+                                                                console.log("Dados")
+                                                                console.table(res.data)})
 
     }, [userAtual])
 
     React.useEffect(() => {
-
+    if(esferas[0] !== undefined){
         if(esferaSelecionada != camada){
 
             
@@ -122,7 +142,7 @@ export function Corpo ({userAtual}:UserProps) {
             }
 
         }
-
+    }
     }, [camada, esferaSelecionada, alternador])
 
 
