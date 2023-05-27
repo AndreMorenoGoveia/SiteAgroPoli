@@ -70,6 +70,8 @@ export function Corpo ({userAtual}:UserProps) {
 
         if(esferaSelecionada != camada){
 
+            
+
             let esferaFilho = esferas.filter((esfera) => esfera.id == esferaSelecionada)[0]
 
             setVisual([<div className="pretoBranco" onClick={() => {setEsferaSelecionada(camada)}} style={{zIndex: 1}}>
@@ -89,13 +91,18 @@ export function Corpo ({userAtual}:UserProps) {
 
 
             if(filhosCamada.length == 1){
-                let esferaFilho = esferas.filter((esfera) => esfera.id == dadosCamada.filhos[0])[0]
-                setVisual([<div className="bola" onClick={() => {
-                                                                setEsferaSelecionada(esferaFilho.id);
-                                                                }} key={1}>
-                                <div className="explode"/>
-                                <Icone animationDelay={0} iconName={esferaFilho.icon}/>
-                            </div>, <div className="historicoContainer" key={1}> {historico} </div>])
+                
+                setVisual([filhosCamada.map((filho) => {
+                    let esferaFilho = esferas.filter((esfera) => esfera.id == dadosCamada.filhos[0])[0]
+                    return (<div className="bola" onClick={() => {
+                            setEsferaSelecionada(esferaFilho.id);
+                            }} key={1}>
+                            <div className="explode"/>
+                            <Icone animationDelay={0} iconName={esferaFilho.icon}/>
+                            </div>)
+                }
+                
+                ), , <div className="historicoContainer" key={1}> {historico} </div>])
             }
             else {
                 setVisual([filhosCamada.map((filho, i) => {
