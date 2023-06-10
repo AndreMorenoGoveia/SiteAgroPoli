@@ -14,6 +14,9 @@ interface Esfera {
     id: string;
   }
 
+const tempoEsfera = 5;
+const tempoExplode = 50;
+
 
 
 type UserProps = {
@@ -133,13 +136,13 @@ export function Corpo ({userAtual}:UserProps) {
             }
             else {
                 setVisual([filhosCamada.map((filho, i) => {
-                    let delay = i*(10/filhosCamada.length)
+                    let delay = i*(tempoEsfera/filhosCamada.length)
                     let esferaFilho = esferas.filter((esfera) => esfera.id == filho)[0]
                     return (<div className="bolagirando" style={{animationDelay: `${delay}s`}} key={i} 
                                  onClick={() => {
                                     setEsferaSelecionada(filho);
                                     }}>
-                                <div className="explode" style={{animationDelay: `${delay*1000 + 100}ms`}} />
+                                <div className="explode" style={{animationDelay: `${delay*tempoEsfera*100 + tempoExplode}ms`}} />
                                 <div className="internoBola" style={{animationDelay: `${delay}s`}} >
                                     <Icone animationDelay={delay} iconName={esferaFilho.icon} />
                                 </div>
