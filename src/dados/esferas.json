@@ -3,21 +3,21 @@
         "id":"1",
         "titulo": "Tudo",
         "descricao": "",
-        "icon": "",
+        "icon": "FaComputer",
         "filhos": ["software", "biologia", "quimica"]
     },
     {
         "id":"software",
         "titulo":"Software",
-        "descricao":"",
-        "icon":"TbWorld",
+        "descricao":" ",
+        "icon":"FaComputer",
         "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop"]
     },
     {
         "id":"desenvolvimento_web",
         "titulo":"Desenvolvimento Web",
         "descricao":"As oportunidades para o Desenvolvimento Web no grupo estão, em grande parte, ligadas à futuras integrações IoT com o hardware que construímos e também projetos de gestão agrícola, que estão em alta no mercado.",
-        "icon":"TbWorld",
+        "icon":"FaComputer",
         "filhos":["basico", "avancado"]
     },
     {
@@ -114,7 +114,7 @@
     {
         "id":"bancodedados",
         "titulo":"Banco de Dados",
-        "descricao":"",
+        "descricao":" ",
         "icon":"AiFillDatabase",
         "filhos":["sql", "nosql"]
     },
@@ -171,9 +171,9 @@
     {
         "id":"desktop",
         "titulo":"Desktop",
-        "descricao":"",
+        "descricao":" ",
         "icon":"AiOutlineDesktop",
-        "filhos":["electronjs", ".net"]
+        "filhos":["electronjs", "net"]
     },
     {
         "id":"electronjs",
@@ -183,18 +183,18 @@
         "filhos":[]
     },
     {
-        "id":".net",
+        "id":"net",
         "titulo":".NET",
         "descricao":".NET é um framework de desenvolvimento de software criado pela Microsoft. Ele oferece um ambiente de execução e um conjunto abrangente de bibliotecas e ferramentas para criar uma ampla variedade de aplicativos, incluindo aplicativos desktop, web e móveis. Com o .NET, os desenvolvedores podem usar várias linguagens de programação, como C#, F# e Visual Basic, para construir aplicativos robustos e escaláveis. Ele também inclui recursos avançados, como gerenciamento automático de memória, suporte à segurança, acesso a banco de dados e integração com outras tecnologias Microsoft. O .NET é amplamente adotado na indústria e possui uma grande comunidade de desenvolvedores ativos.",
         "icon":"SiDotnet",
         "filhos":[]
    },
   {
-   "id":"processamento_de_dados_machine_learning",
-   "titulo":"Processamento de dados / machine learning",
-   "descricao":"",
-   "icon":"FaRobot",
-   "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
+        "id":"processamento_de_dados_machine_learning",
+        "titulo":"Processamento de dados / machine learning",
+        "descricao":" ",
+        "icon":"FaRobot",
+        "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
    },
    {
        "id":"python_scikit_matplotlib",
@@ -213,7 +213,7 @@
    {
     "id":"visao_computacional",
     "titulo":"Visão computacional",
-    "descricao":"",
+    "descricao":" ",
     "icon":"AiFillEye",
     "filhos":["opencv"]
 },
@@ -228,7 +228,7 @@
 {
     "id":"hardware",
     "titulo":"Para Hardware",
-    "descricao":"",
+    "descricao":" ",
     "icon":"FcElectronics",
     "filhos":["C++_arduino_esp32", "python_raspberrypi"]
 },
@@ -249,7 +249,7 @@
 {
     "id":"biologia",
     "titulo":"Biologia",
-    "descricao":"",
+    "descricao":" ",
     "icon":"FaMicroscope",
     "filhos":["biologia_celular_biologia_molecular", "bioquimica", "zoologia", "botanica", "ecologia", "evolucao", "genetica", "microbiologia"]
 },
@@ -317,7 +317,7 @@
 {
     "id":"quimica",
     "titulo":"Química",
-    "descricao":"",
+    "descricao":" ",
     "icon":"GiChemicalDrop",
     "filhos":["bioquimicaChem"]
 },
