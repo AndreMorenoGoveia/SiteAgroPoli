@@ -10,15 +10,15 @@
         "id":"software",
         "titulo":"Software",
         "descricao":"",
-        "icon":"TfiWorld",
-        "filhos":["desenvolvimento_web", "Processamento_de_dados_machine_learning"]
+        "icon":"TbWorld",
+        "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop"]
     },
     {
         "id":"desenvolvimento_web",
         "titulo":"Desenvolvimento Web",
         "descricao":"As oportunidades para o Desenvolvimento Web no grupo estão, em grande parte, ligadas à futuras integrações IoT com o hardware que construímos e também projetos de gestão agrícola, que estão em alta no mercado.",
-        "icon":"TfiWorld",
-        "filhos":["basico", "avancado", "bancodedados", "mobile", "desktop"]
+        "icon":"TbWorld",
+        "filhos":["basico", "avancado"]
     },
     {
         "id":"basico",
@@ -189,15 +189,8 @@
         "icon":"SiDotnet",
         "filhos":[]
    },
-   {
-       "id":"Processamento de dados / machine learning",
-       "titulo":"",
-       "descricao":"",
-       "icon":"",
-       "filhos":[]
-  },
   {
-   "id":"Processamento_de_dados_machine_learning",
+   "id":"processamento_de_dados_machine_learning",
    "titulo":"Processamento de dados / machine learning",
    "descricao":"",
    "icon":"FaRobot",
@@ -234,7 +227,7 @@
 
 {
     "id":"hardware",
-    "titulo":"Hardware",
+    "titulo":"Para Hardware",
     "descricao":"",
     "icon":"FcElectronics",
     "filhos":["C++_arduino_esp32", "python_raspberrypi"]
@@ -263,42 +256,42 @@
 {
     "id":"biologia_celular_biologia_molecular",
     "titulo":"Biologia Celular / Biologia Molecular",
-    "descricao":"Descrição: A Biologia Celular é a área que estuda a função e estrutura das células. A Biologia Molecular está muito próxima da Celular, mas possui foco maior nos mecanismos moleculares do DNA, RNA e proteínas.\n\n Organização: Biologia Celular pode ser dividida no estudo interconectado de composição, comunicação, ciclo e metabolismo celulares.\n\n Recomendações de estudo: \n Fundamentos de Biologia Celular [B. Alberts] [4a ed.]\n Biologia Molecular da Célula [B. Alberts] [6a ed.]\n",
+    "descricao":"A Biologia Celular é a área que estuda a função e estrutura das células. A Biologia Molecular está muito próxima da Celular, mas possui foco maior nos mecanismos moleculares do DNA, RNA e proteínas.\n\n Organização: Biologia Celular pode ser dividida no estudo interconectado de composição, comunicação, ciclo e metabolismo celulares.\n\n Recomendações de estudo: \n Fundamentos de Biologia Celular [B. Alberts] [4a ed.]\n Biologia Molecular da Célula [B. Alberts] [6a ed.]\n",
     "icon":"GiChemicalDrop",
     "filhos":[]
 },
 {
     "id":"bioquimica",
     "titulo":"Bioquímica",
-    "descricao":"Descrição: Estudo das moléculas e reações químicas que ocorrem em seres vivos.\n\n Organização: Pode ser dividida em três grandes áreas:\n Estrutura - Compreender como é a estrutura química de Aminoácidos, Proteínas, Enzimas, Carboidratos, Lipídeos e Ácidos Nucleicos, assim como sua relação com a suas respectivas funções biológicas.\n Energética e Metabolismo - Estudo dos mecanismos metabólicos que transformam energia nos seres vivos, incluindo Glicólise, Oxidação Fosforilativa, Respiração Celular, Fermentação, Fotossíntese, Glicogênese.\n Genética - Foco no metabolismo de DNA e RNA, desde síntese, enrolamento, replicação, recombinação, até a expressão gênica destes.\n Recomendações de estudo: \n\n Princípios de Bioquímica de Lehninger [David L. Nelson] [6a ed.]\n Princípios de Bioquímica: A vida em nível molecular [Donald Voet] [4a ed.]\n\n Recursos Úteis: \n Database de enzimas, suas reações químicas e caminhos metabólicos - https://www.brenda-enzymes.info/index.php\n Site com diversos assuntos de Química de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://chem.libretexts.org/\n",
+    "descricao":"Estudo das moléculas e reações químicas que ocorrem em seres vivos.\n\n Organização: Pode ser dividida em três grandes áreas:\n Estrutura - Compreender como é a estrutura química de Aminoácidos, Proteínas, Enzimas, Carboidratos, Lipídeos e Ácidos Nucleicos, assim como sua relação com a suas respectivas funções biológicas.\n Energética e Metabolismo - Estudo dos mecanismos metabólicos que transformam energia nos seres vivos, incluindo Glicólise, Oxidação Fosforilativa, Respiração Celular, Fermentação, Fotossíntese, Glicogênese.\n Genética - Foco no metabolismo de DNA e RNA, desde síntese, enrolamento, replicação, recombinação, até a expressão gênica destes.\n Recomendações de estudo: \n\n Princípios de Bioquímica de Lehninger [David L. Nelson] [6a ed.]\n Princípios de Bioquímica: A vida em nível molecular [Donald Voet] [4a ed.]\n\n Recursos Úteis: \n Database de enzimas, suas reações químicas e caminhos metabólicos - https://www.brenda-enzymes.info/index.php\n Site com diversos assuntos de Química de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://chem.libretexts.org/\n",
     "icon":"FaBacteria",
     "filhos":[]
 },
 {
     "id":"zoologia",
     "titulo":"Zoologia",
-    "descricao":"Descrição: Estudo do reino animal.\n\n Organização: Essa área pode ser subdividida em Anatomia, Fisiologia, Comportamento, Evolução, Biodiversidade e Microbiologia, apesar de não se limitar a elas. Os livros de graduação, no entanto, tendem a dividir o estudo em Invertebrados e Vertebrados.\n\n Recomendações de estudo: \n Princípios Integrados de Zoologia [Hickman] [16a ed.]\n Invertebrates [Brusca] [2a ed.]\n A Vida dos Vertebrados [Pough] [4a ed.]\n\n",
+    "descricao":"Estudo do reino animal.\n\n Organização: Essa área pode ser subdividida em Anatomia, Fisiologia, Comportamento, Evolução, Biodiversidade e Microbiologia, apesar de não se limitar a elas. Os livros de graduação, no entanto, tendem a dividir o estudo em Invertebrados e Vertebrados.\n\n Recomendações de estudo: \n Princípios Integrados de Zoologia [Hickman] [16a ed.]\n Invertebrates [Brusca] [2a ed.]\n A Vida dos Vertebrados [Pough] [4a ed.]\n\n",
     "icon":"GiDinosaurRex",
     "filhos":[]
 },
 {
     "id":"botanica",
     "titulo":"Botânica",
-    "descricao":"Descrição: Ciência que estuda as plantas.\n\n Organização: Pode ser dividida nas áreas de Fisiologia, Morfologia, Ecologia e Sistemática, apesar de também incluir citologia, histologia e anatomia como disciplinas correlatas, e ainda especializações como agronomia, biotecnologia, ciência dos alimentos e manejo de recursos naturais.\n\n Recomendações de estudo: \n Biologia Vegetal [Eichhorn; Raven] [8a ed.]\n Fisiologia Vegetal [Taiz; Zeiger] [5a ed.]\n",
-    "icon":"TbPlant",
+    "descricao":"Ciência que estuda as plantas.\n\n Organização: Pode ser dividida nas áreas de Fisiologia, Morfologia, Ecologia e Sistemática, apesar de também incluir citologia, histologia e anatomia como disciplinas correlatas, e ainda especializações como agronomia, biotecnologia, ciência dos alimentos e manejo de recursos naturais.\n\n Recomendações de estudo: \n Biologia Vegetal [Eichhorn; Raven] [8a ed.]\n Fisiologia Vegetal [Taiz; Zeiger] [5a ed.]\n",
+    "icon":"GiPlantRoots",
     "filhos":[]
 },
 {
     "id":"ecologia",
     "titulo":"Ecologia",
-    "descricao":"Descrição: É o estudo dos seres vivos, como eles interagem e como são influenciados entre si e com o ecossistema em que estão inseridos.\n\n Organização: Pode ser entendida em quatro diferentes níveis: organismo, população, comunidade e ecossistema. Também pode ser observada sob diferentes ênfases, como o comportamental, molecular, fisiológico e biogeográfico.\n\n Recomendações de estudo: \n Fundamentos de Ecologia [Townsend] [3a ed.]\n Ecologia [Cain] [3a ed.]\n",
+    "descricao":"É o estudo dos seres vivos, como eles interagem e como são influenciados entre si e com o ecossistema em que estão inseridos.\n\n Organização: Pode ser entendida em quatro diferentes níveis: organismo, população, comunidade e ecossistema. Também pode ser observada sob diferentes ênfases, como o comportamental, molecular, fisiológico e biogeográfico.\n\n Recomendações de estudo: \n Fundamentos de Ecologia [Townsend] [3a ed.]\n Ecologia [Cain] [3a ed.]\n",
     "icon":"GiTreeBranch",
     "filhos":[]
 },
 {
     "id":"evolucao",
     "titulo":"Evolução",
-    "descricao":"Descrição: Estudo dos processos evolutivos que originaram a diversidade.\n\n Organização: Envolve resumidamente Teorias Evolutivas, Mecanismos micro e macroevolutivos, e Filogenia/Sistemática.\n\n Recomendações de estudo: \n Análise Evolutiva [Freeman; Herron] [4a ed.]\n",
+    "descricao":"Estudo dos processos evolutivos que originaram a diversidade.\n\n Organização: Envolve resumidamente Teorias Evolutivas, Mecanismos micro e macroevolutivos, e Filogenia/Sistemática.\n\n Recomendações de estudo: \n Análise Evolutiva [Freeman; Herron] [4a ed.]\n",
     "icon":"GiHumanPyramid",
     "filhos":[]
 },
@@ -308,14 +301,14 @@
 {
     "id":"genetica",
     "titulo":"Genética",
-    "descricao":"Descrição: Estudo dos genes e da hereditariedade.\n\n Organização: Algumas subdivisões incluem Teoria Mendeliana, Genômica, Parâmetros Genéticos-Estatísticos, Genética de Populações.\n\n Recomendações de estudo: \n Introdução à Genética [Griffiths] [11a ed.]\n",
+    "descricao":"Estudo dos genes e da hereditariedade.\n\n Organização: Algumas subdivisões incluem Teoria Mendeliana, Genômica, Parâmetros Genéticos-Estatísticos, Genética de Populações.\n\n Recomendações de estudo: \n Introdução à Genética [Griffiths] [11a ed.]\n",
     "icon":"BiDna",
     "filhos":[]
 },
 {
     "id":"microbiologia",
     "titulo":"Microbiologia",
-    "descricao":"Descrição: Estudo dos microrganismos.\n\n Organização: Pode ser estudada a partir da Morfologia, Nutrição, Metabolismo, Classificação e Controle. Além disso, engloba subáreas como Parasitologia, Micologia, Bacteriologia, Virologia, Protozoologia e Ficologia.\n\n Recomendações de estudo: \n Microbiologia de Brock [Madigan] [14a ed.]\n\n Recursos Úteis:\n Site com diversos assuntos de Biologia de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://bio.libretexts.org/\n",
+    "descricao":"Estudo dos microrganismos.\n\n Organização: Pode ser estudada a partir da Morfologia, Nutrição, Metabolismo, Classificação e Controle. Além disso, engloba subáreas como Parasitologia, Micologia, Bacteriologia, Virologia, Protozoologia e Ficologia.\n\n Recomendações de estudo: \n Microbiologia de Brock [Madigan] [14a ed.]\n\n Recursos Úteis:\n Site com diversos assuntos de Biologia de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://bio.libretexts.org/\n",
     "icon":"FaBacteria",
     "filhos":[]
 },
@@ -331,7 +324,7 @@
 {
     "id":"bioquimicaChem",
     "titulo":"Bioquímica",
-    "descricao":"Descrição: Estudo das moléculas e reações químicas que ocorrem em seres vivos.\n\n Organização: Pode ser dividida em três grandes áreas:\n Estrutura - Compreender como é a estrutura química de Aminoácidos, Proteínas, Enzimas, Carboidratos, Lipídeos e Ácidos Nucleicos, assim como sua relação com a suas respectivas funções biológicas.\n Energética e Metabolismo - Estudo dos mecanismos metabólicos que transformam energia nos seres vivos, incluindo Glicólise, Oxidação Fosforilativa, Respiração Celular, Fermentação, Fotossíntese, Glicogênese.\n Genética - Foco no metabolismo de DNA e RNA, desde síntese, enrolamento, replicação, recombinação, até a expressão gênica destes.\n\n Recomendações de estudo: \n Princípios de Bioquímica de Lehninger [David L. Nelson] [6a ed.]\n Princípios de Bioquímica: A vida em nível molecular [Donald Voet] [4a ed.]\n\n Recursos Úteis: \n Database de enzimas, suas reações químicas e caminhos metabólicos - https://www.brenda-enzymes.info/index.php\n\n Recursos Úteis:\n Site com diversos assuntos de Química de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://chem.libretexts.org/\n",
+    "descricao":"Estudo das moléculas e reações químicas que ocorrem em seres vivos.\n\n Organização: Pode ser dividida em três grandes áreas:\n Estrutura - Compreender como é a estrutura química de Aminoácidos, Proteínas, Enzimas, Carboidratos, Lipídeos e Ácidos Nucleicos, assim como sua relação com a suas respectivas funções biológicas.\n Energética e Metabolismo - Estudo dos mecanismos metabólicos que transformam energia nos seres vivos, incluindo Glicólise, Oxidação Fosforilativa, Respiração Celular, Fermentação, Fotossíntese, Glicogênese.\n Genética - Foco no metabolismo de DNA e RNA, desde síntese, enrolamento, replicação, recombinação, até a expressão gênica destes.\n\n Recomendações de estudo: \n Princípios de Bioquímica de Lehninger [David L. Nelson] [6a ed.]\n Princípios de Bioquímica: A vida em nível molecular [Donald Voet] [4a ed.]\n\n Recursos Úteis: \n Database de enzimas, suas reações químicas e caminhos metabólicos - https://www.brenda-enzymes.info/index.php\n\n Recursos Úteis:\n Site com diversos assuntos de Química de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://chem.libretexts.org/\n",
     "icon":"FaBacteria",
     "filhos":[]
 }
