@@ -3,21 +3,21 @@
         "id":"1",
         "titulo": "Tudo",
         "descricao": "",
-        "icon": "",
+        "icon": "AiOutlineLaptop",
         "filhos": ["software", "biologia", "quimica"]
     },
     {
         "id":"software",
         "titulo":"Software",
-        "descricao":"",
-        "icon":"TbWorld",
+        "descricao":" ",
+        "icon":"AiOutlineLaptop",
         "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop"]
     },
     {
         "id":"desenvolvimento_web",
         "titulo":"Desenvolvimento Web",
         "descricao":"As oportunidades para o Desenvolvimento Web no grupo estão, em grande parte, ligadas à futuras integrações IoT com o hardware que construímos e também projetos de gestão agrícola, que estão em alta no mercado.",
-        "icon":"TbWorld",
+        "icon":"AiOutlineLaptop",
         "filhos":["basico", "avancado"]
     },
     {
@@ -45,7 +45,7 @@
         "id":"javascript",
         "titulo":"JavaScript",
         "descricao":"Permite páginas da Web interativas. Apesar de ser conhecida como a linguagem de script para páginas Web, também roda em ambientes fora do browser.",
-        "icon":"IoLogoJavascript",
+        "icon":"BiLogoJavascript",
         "filhos":[]
     },
     {
@@ -114,7 +114,7 @@
     {
         "id":"bancodedados",
         "titulo":"Banco de Dados",
-        "descricao":"",
+        "descricao":" ",
         "icon":"AiFillDatabase",
         "filhos":["sql", "nosql"]
     },
@@ -171,30 +171,30 @@
     {
         "id":"desktop",
         "titulo":"Desktop",
-        "descricao":"",
+        "descricao":" ",
         "icon":"AiOutlineDesktop",
-        "filhos":["electronjs", ".net"]
+        "filhos":["electronjs", "net"]
     },
     {
         "id":"electronjs",
         "titulo":"ElectronJS",
         "descricao":" Electron.js é um framework de código aberto que permite desenvolver aplicativos de desktop multiplataforma usando tecnologias web, como HTML, CSS e JavaScript. Ele fornece uma camada de abstração para criar interfaces gráficas utilizando o Chromium e o Node.js, permitindo criar aplicativos de desktop com uma experiência semelhante à web. Com o Electron.js, os desenvolvedores podem criar aplicativos para Windows, macOS e Linux de forma eficiente, compartilhando grande parte do código entre as plataformas.",
-        "icon":"IoLogoElectron",
+        "icon":"SiElectron",
         "filhos":[]
     },
     {
-        "id":".net",
+        "id":"net",
         "titulo":".NET",
         "descricao":".NET é um framework de desenvolvimento de software criado pela Microsoft. Ele oferece um ambiente de execução e um conjunto abrangente de bibliotecas e ferramentas para criar uma ampla variedade de aplicativos, incluindo aplicativos desktop, web e móveis. Com o .NET, os desenvolvedores podem usar várias linguagens de programação, como C#, F# e Visual Basic, para construir aplicativos robustos e escaláveis. Ele também inclui recursos avançados, como gerenciamento automático de memória, suporte à segurança, acesso a banco de dados e integração com outras tecnologias Microsoft. O .NET é amplamente adotado na indústria e possui uma grande comunidade de desenvolvedores ativos.",
         "icon":"SiDotnet",
         "filhos":[]
    },
   {
-   "id":"processamento_de_dados_machine_learning",
-   "titulo":"Processamento de dados / machine learning",
-   "descricao":"",
-   "icon":"FaRobot",
-   "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
+        "id":"processamento_de_dados_machine_learning",
+        "titulo":"Processamento de dados / machine learning",
+        "descricao":" ",
+        "icon":"FaRobot",
+        "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
    },
    {
        "id":"python_scikit_matplotlib",
@@ -213,7 +213,7 @@
    {
     "id":"visao_computacional",
     "titulo":"Visão computacional",
-    "descricao":"",
+    "descricao":" ",
     "icon":"AiFillEye",
     "filhos":["opencv"]
 },
@@ -228,12 +228,12 @@
 {
     "id":"hardware",
     "titulo":"Para Hardware",
-    "descricao":"",
+    "descricao":" ",
     "icon":"FcElectronics",
-    "filhos":["C++_arduino_esp32", "python_raspberrypi"]
+    "filhos":["Cpp_arduino_esp32", "python_raspberrypi"]
 },
 {
-   "id":"C++_arduino_esp32",
+   "id":"Cpp_arduino_esp32",
    "titulo":"C++ (Arduino / ESP32)",
    "descricao":"C++ é uma linguagem de programação amplamente utilizada no desenvolvimento de firmware para Arduino e ESP32. Com C++, os desenvolvedores podem aproveitar recursos avançados, como a manipulação direta de memória e o acesso de baixo nível aos recursos do microcontrolador. C++ oferece suporte a orientação a objetos, permitindo a criação de classes e objetos para encapsular funcionalidades e promover a reutilização de código. Além disso, a vasta biblioteca padrão do C++ e as bibliotecas específicas para Arduino e ESP32 fornecem recursos adicionais para facilitar o desenvolvimento de projetos embarcados.",
    "icon":"TbBrandCpp",
@@ -249,7 +249,7 @@
 {
     "id":"biologia",
     "titulo":"Biologia",
-    "descricao":"",
+    "descricao":" ",
     "icon":"FaMicroscope",
     "filhos":["biologia_celular_biologia_molecular", "bioquimica", "zoologia", "botanica", "ecologia", "evolucao", "genetica", "microbiologia"]
 },
@@ -317,7 +317,7 @@
 {
     "id":"quimica",
     "titulo":"Química",
-    "descricao":"",
+    "descricao":" ",
     "icon":"GiChemicalDrop",
     "filhos":["bioquimicaChem"]
 },

@@ -30,6 +30,7 @@ export function Corpo ({userAtual}:UserProps) {
     /* Camada Inicial */
     const camadaInicial = "1"
     const [camada, setCamada] = React.useState(camadaInicial);
+    let keyIcone = 0;
 
 
 
@@ -103,12 +104,12 @@ export function Corpo ({userAtual}:UserProps) {
             
 
             let esferaFilho = esferas.filter((esfera) => esfera.id == esferaSelecionada)[0]
-
+            keyIcone++;
             setVisual([<div className="pretoBranco" onClick={() => {setEsferaSelecionada(camada)}} style={{zIndex: 1}}>
                             <div className="tituloEsfera">{esferaFilho.titulo}</div>
                             <div className="descricaoEsfera">{esferaFilho.descricao}</div>
                             <div className="bola" style={{position: "relative", zIndex: 2}} onClick={handleClickMudaCamada}>
-                                <Icone iconName={esferaFilho.icon} animationDelay={0} />
+                                <Icone key={keyIcone} iconName={esferaFilho.icon} animationDelay={0} />
                             </div>
                         </div>])
 
@@ -121,14 +122,14 @@ export function Corpo ({userAtual}:UserProps) {
 
 
             if(filhosCamada.length == 1){
-                
+                keyIcone++;
                 setVisual([filhosCamada.map((filho) => {
                     let esferaFilho = esferas.filter((esfera) => esfera.id == dadosCamada.filhos[0])[0]
                     return (<div className="bola" onClick={() => {
                             setEsferaSelecionada(esferaFilho.id);
                             }} key={1}>
                             <div className="explode"/>
-                            <Icone animationDelay={0} iconName={esferaFilho.icon}/>
+                            <Icone key={keyIcone} animationDelay={0} iconName={esferaFilho.icon}/>
                             </div>)
                 }
                 
@@ -138,13 +139,14 @@ export function Corpo ({userAtual}:UserProps) {
                 setVisual([filhosCamada.map((filho, i) => {
                     let delay = i*(tempoEsfera/filhosCamada.length)
                     let esferaFilho = esferas.filter((esfera) => esfera.id == filho)[0]
+                    keyIcone++;
                     return (<div className="bolagirando" style={{animationDelay: `${delay}s`}} key={i} 
                                  onClick={() => {
                                     setEsferaSelecionada(filho);
                                     }}>
                                 <div className="explode" style={{animationDelay: `${delay*1000 + tempoExplode}ms`}} />
                                 <div className="internoBola" style={{animationDelay: `${delay}s`}} >
-                                    <Icone animationDelay={delay} iconName={esferaFilho.icon} />
+                                    <Icone key={keyIcone} animationDelay={delay} iconName={esferaFilho.icon} />
                                 </div>
                             </div>)
 
