@@ -10,7 +10,7 @@ function App() {
   return (
     <Container>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<RPG/>}/>
         <Route path="/RPG" element={<RPG/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes>

@@ -2,6 +2,7 @@ import './Corpo.scss'
 import React from 'react'
 import { Icone } from '../Auxiliares/Icone';
 import axios from 'axios';
+import esferas from '../dados/esferas.json'
 
 
 interface Esfera {
@@ -30,7 +31,7 @@ export function Corpo ({userAtual}:UserProps) {
 
 
     /* Esferas */
-    const [esferas, setEsferas] = React.useState<Esfera[]>([]);
+    //const [esferas, setEsferas] = React.useState<Esfera[]>([]);
 
     /* Esfera clicada */
     const [esferaSelecionada, setEsferaSelecionada] = React.useState(camadaInicial)
@@ -50,7 +51,12 @@ export function Corpo ({userAtual}:UserProps) {
         event.stopPropagation();
         const camadaAnterior = camada
         /* Muda a camada */
-        setCamada(esferaSelecionada);
+        const esfera = esferas.filter(
+            (esfera) => esfera.id == esferaSelecionada
+        )[0]
+        if(esfera.filhos.length > 0) {
+            setCamada(esferaSelecionada);
+        }
         /* Acrescenta ao historico */
         setHistorico([...historico,
                        <div className="historico" onClick={() => {
@@ -77,12 +83,12 @@ export function Corpo ({userAtual}:UserProps) {
         setHistorico([])
         setAlternador((prevAlternador) => !prevAlternador)
 
-        axios.get("http://127.0.0.1:3001/check").then((res) => {setEsferas(res.data)
-                                                                
-                                                                console.log("Esferas")
-                                                                console.table(esferas)
-                                                                console.log("Dados")
-                                                                console.table(res.data)})
+        // axios.get("http://127.0.0.1:3001/check").then((res) => {setEsferas(res.data)
+        //
+        //                                                         console.log("Esferas")
+        //                                                         console.table(esferas)
+        //                                                         console.log("Dados")
+        //                                                         console.table(res.data)})
 
     }, [userAtual])
 

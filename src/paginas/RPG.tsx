@@ -13,9 +13,10 @@ export function RPG () {
 
     return (
             <>
-                <Navbar userAtual={userAtual} setUserAtual={setUserAtual} />
                 <Corpo userAtual={userAtual}/>
             </>
             )
+
+    //<Navbar userAtual={userAtual} setUserAtual={setUserAtual} />
 
 }
