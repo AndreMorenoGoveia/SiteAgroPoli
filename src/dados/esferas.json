@@ -3,13 +3,13 @@
         "id":"1",
         "titulo": "Tudo",
         "descricao": "",
-        "icon": "",
+        "icon": "FaComputer",
         "filhos": ["software", "biologia", "quimica"]
     },
     {
         "id":"software",
         "titulo":"Software",
-        "descricao":"",
+        "descricao":" ",
         "icon":"FaComputer",
         "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop"]
     },
@@ -114,7 +114,7 @@
     {
         "id":"bancodedados",
         "titulo":"Banco de Dados",
-        "descricao":"",
+        "descricao":" ",
         "icon":"AiFillDatabase",
         "filhos":["sql", "nosql"]
     },
@@ -171,7 +171,7 @@
     {
         "id":"desktop",
         "titulo":"Desktop",
-        "descricao":"",
+        "descricao":" ",
         "icon":"AiOutlineDesktop",
         "filhos":["electronjs", "net"]
     },
@@ -190,11 +190,11 @@
         "filhos":[]
    },
   {
-   "id":"processamento_de_dados_machine_learning",
-   "titulo":"Processamento de dados / machine learning",
-   "descricao":"",
-   "icon":"FaRobot",
-   "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
+        "id":"processamento_de_dados_machine_learning",
+        "titulo":"Processamento de dados / machine learning",
+        "descricao":" ",
+        "icon":"FaRobot",
+        "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
    },
    {
        "id":"python_scikit_matplotlib",
@@ -213,7 +213,7 @@
    {
     "id":"visao_computacional",
     "titulo":"Visão computacional",
-    "descricao":"",
+    "descricao":" ",
     "icon":"AiFillEye",
     "filhos":["opencv"]
 },
@@ -228,7 +228,7 @@
 {
     "id":"hardware",
     "titulo":"Para Hardware",
-    "descricao":"",
+    "descricao":" ",
     "icon":"FcElectronics",
     "filhos":["C++_arduino_esp32", "python_raspberrypi"]
 },
@@ -249,7 +249,7 @@
 {
     "id":"biologia",
     "titulo":"Biologia",
-    "descricao":"",
+    "descricao":" ",
     "icon":"FaMicroscope",
     "filhos":["biologia_celular_biologia_molecular", "bioquimica", "zoologia", "botanica", "ecologia", "evolucao", "genetica", "microbiologia"]
 },
@@ -317,7 +317,7 @@
 {
     "id":"quimica",
     "titulo":"Química",
-    "descricao":"",
+    "descricao":" ",
     "icon":"GiChemicalDrop",
     "filhos":["bioquimicaChem"]
 },
