@@ -10,14 +10,14 @@
         "id":"software",
         "titulo":"Software",
         "descricao":"",
-        "icon":"TbWorld",
+        "icon":"FaComputer",
         "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop"]
     },
     {
         "id":"desenvolvimento_web",
         "titulo":"Desenvolvimento Web",
         "descricao":"As oportunidades para o Desenvolvimento Web no grupo estão, em grande parte, ligadas à futuras integrações IoT com o hardware que construímos e também projetos de gestão agrícola, que estão em alta no mercado.",
-        "icon":"TbWorld",
+        "icon":"FaComputer",
         "filhos":["basico", "avancado"]
     },
     {
@@ -173,7 +173,7 @@
         "titulo":"Desktop",
         "descricao":"",
         "icon":"AiOutlineDesktop",
-        "filhos":["electronjs", ".net"]
+        "filhos":["electronjs", "net"]
     },
     {
         "id":"electronjs",
@@ -183,7 +183,7 @@
         "filhos":[]
     },
     {
-        "id":".net",
+        "id":"net",
         "titulo":".NET",
         "descricao":".NET é um framework de desenvolvimento de software criado pela Microsoft. Ele oferece um ambiente de execução e um conjunto abrangente de bibliotecas e ferramentas para criar uma ampla variedade de aplicativos, incluindo aplicativos desktop, web e móveis. Com o .NET, os desenvolvedores podem usar várias linguagens de programação, como C#, F# e Visual Basic, para construir aplicativos robustos e escaláveis. Ele também inclui recursos avançados, como gerenciamento automático de memória, suporte à segurança, acesso a banco de dados e integração com outras tecnologias Microsoft. O .NET é amplamente adotado na indústria e possui uma grande comunidade de desenvolvedores ativos.",
         "icon":"SiDotnet",
