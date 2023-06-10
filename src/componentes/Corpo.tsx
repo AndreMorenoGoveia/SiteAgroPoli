@@ -56,21 +56,22 @@ export function Corpo ({userAtual}:UserProps) {
         )[0]
         if(esfera.filhos.length > 0) {
             setCamada(esferaSelecionada);
+        
+            /* Acrescenta ao historico */
+            setHistorico([...historico,
+                        <div className="historico" onClick={() => {
+                                    setEsferaSelecionada(camadaAnterior)
+                                    setCamada(camadaAnterior)
+                                    setVisual([])
+                                    setHistorico((prevHistorico) => prevHistorico.slice(0, historico.length))
+                                    }
+                                    } key={historico.length + 1}>
+                                <div className="bolinha" />
+                                {camadaAnterior == camadaInicial ? 'Início' : esferas.filter(
+                                    (esfera) => esfera.id == camadaAnterior
+                                )[0].titulo}
+                            </div>])
         }
-        /* Acrescenta ao historico */
-        setHistorico([...historico,
-                       <div className="historico" onClick={() => {
-                                setEsferaSelecionada(camadaAnterior)
-                                setCamada(camadaAnterior)
-                                setVisual([])
-                                setHistorico((prevHistorico) => prevHistorico.slice(0, historico.length))
-                                }
-                                } key={historico.length + 1}>
-                            <div className="bolinha" />
-                            {camadaAnterior == camadaInicial ? 'Início' : esferas.filter(
-                                (esfera) => esfera.id == camadaAnterior
-                            )[0].titulo}
-                        </div>])
     }
 
 
