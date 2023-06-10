@@ -142,7 +142,7 @@ export function Corpo ({userAtual}:UserProps) {
                                  onClick={() => {
                                     setEsferaSelecionada(filho);
                                     }}>
-                                <div className="explode" style={{animationDelay: `${delay*tempoEsfera*100 + tempoExplode}ms`}} />
+                                <div className="explode" style={{animationDelay: `${delay*tempoEsfera*1000 + tempoExplode}ms`}} />
                                 <div className="internoBola" style={{animationDelay: `${delay}s`}} >
                                     <Icone animationDelay={delay} iconName={esferaFilho.icon} />
                                 </div>
