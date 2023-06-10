@@ -1,48 +1,338 @@
 [
     {
         "id":"1",
-        "titulo": "André",
+        "titulo": "Tudo",
         "descricao": "",
         "icon": "",
-        "filhos": ["2", "3"]
+        "filhos": ["software", "biologia", "quimica"]
     },
     {
-        "id":"2",
-        "titulo": "Gestão",
-        "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
-        "icon": "FaBusinessTime",
-        "filhos": ["4", "5"]
+        "id":"software",
+        "titulo":"Software",
+        "descricao":"",
+        "icon":"TfiWorld",
+        "filhos":["desenvolvimento_web", "Processamento_de_dados_machine_learning"]
     },
     {
-        "id": "3",
-        "titulo": "Técnico",
-        "descricao": "Área técnica focada em formar profissionais capazes de produzir produtos",
-        "icon": "GiTechnoHeart",
-        "filhos": ["6", "7", "8"]
+        "id":"desenvolvimento_web",
+        "titulo":"Desenvolvimento Web",
+        "descricao":"As oportunidades para o Desenvolvimento Web no grupo estão, em grande parte, ligadas à futuras integrações IoT com o hardware que construímos e também projetos de gestão agrícola, que estão em alta no mercado.",
+        "icon":"TfiWorld",
+        "filhos":["basico", "avancado", "bancodedados", "mobile", "desktop"]
     },
     {
-        "id":"4",
-        "titulo": "Liderança",
-        "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
-        "icon": "GiChatBubble",
-        "filhos": ["9"]
+        "id":"basico",
+        "titulo":"Básico",
+        "descricao":"Esses são os primeiros passos para iniciar no desenvolvimento web.",
+        "icon":"FaBaby",
+        "filhos":["html", "css", "javascript"]
+   },
+   {
+        "id":"html",
+        "titulo":"HTML",
+        "descricao":"HTML é uma linguagem de marcação utilizada na construção de páginas Web interpretadas por navegadores.",
+        "icon":"AiFillHtml5",
+        "filhos":[]
     },
     {
-        "id":"5",
-        "titulo": "Comunicaçao",
-        "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
-        "icon": "FaAcquisitionsIncorporated",
-        "linksRecomendados": [{ "tituloLink": "Primo Pobre",
-                                "link": "https://www.youtube.com/@PrimoPobre"},
-                              { "tituloLink": "Jovem de negocios",  
-                                "link": "https://www.youtube.com/@jovensdenegocios"}],
-        "filhos": ["11", "12"]
+        "id":"css",
+        "titulo":"CSS",
+        "descricao":"O Cascading Style Sheets (CSS)  define a aparência de páginas web.",
+        "icon":"DiCss3",
+        "filhos":[]
     },
     {
-        "id":"9",
-        "titulo": "Sockets",
-        "descricao": "Área de gestão focada em formar profissionais capacitados para gerir equipes e empresas",
-        "icon": "FaAccessibleIcon",
-        "filhos": ["9", "10"]
-    }
+        "id":"javascript",
+        "titulo":"JavaScript",
+        "descricao":"Permite páginas da Web interativas. Apesar de ser conhecida como a linguagem de script para páginas Web, também roda em ambientes fora do browser.",
+        "icon":"IoLogoJavascript",
+        "filhos":[]
+    },
+    {
+        "id":"avancado",
+        "titulo":"Avançado",
+        "descricao":"Aqui estão listadas tecnologias importantes para o desenvolvimento web eficiente.",
+        "icon":"SiAzuredataexplorer",
+        "filhos":["frontend", "backend"]
+    },
+    {
+        "id":"frontend",
+        "titulo":"FronEnd",
+        "descricao":"Tecnologias utilizadas para a criação da interface gráfica de sites.",
+        "icon":"CgScreen",
+        "filhos":["react", "vue", "django", "angular"]
+    },
+    {
+        "id":"react",
+        "titulo":"React",
+        "descricao":"O React cria interfaces de usuário em páginas web, baseando-se em componentes (reutilização de código).",
+        "icon":"DiReact",
+        "filhos":[]
+   },
+   {
+        "id":"vue",
+        "titulo":"Vue",
+        "descricao":"Framework progressivo para a construção de interfaces de usuário, projetado para ser adotável incrementalmente.",
+        "icon":"FaVuejs",
+        "filhos":[]
+    },
+    {
+        "id":"django",
+        "titulo":"Django",
+        "descricao":"Django é um framework web em Python que segue o padrão MVC. Ele simplifica o desenvolvimento de aplicativos web, fornecendo recursos como ORM, roteamento de URLs, templates, formulários e autenticação. Com uma comunidade ativa e flexibilidade, o Django permite criar aplicativos web escaláveis e de alta qualidade.",
+        "icon":"BiLogoDjango",
+        "filhos":[]
+   },
+   {
+        "id":"backend",
+        "titulo":"Backend",
+        "descricao":"Backend é a parte de um aplicativo que os usuários não podem ver, tudo aquilo que está por trás da interface de uma aplicação: seus sistemas, banco de dados.",
+        "icon":"BiNetworkChart",
+        "filhos":["nodejs", "flask", "java"]
+    },
+    {
+        "id":"nodejs",
+        "titulo":"NodeJS",
+        "descricao":"Node.js é um ambiente de execução JavaScript que permite executar aplicações autonomamente, sem depender de um navegador.",
+        "icon":"BiLogoNodejs",
+        "filhos":[]
+   },
+   {
+        "id":"flask",
+        "titulo":"Flask",
+        "descricao":"Flask é um micro framework que utiliza a linguagem Python para criar aplicativos Web. Possui simplicidade, rapidez, soluções para projetos pequenos e aplicações robustas.",
+        "icon":"BiLogoFlask",
+        "filhos":[]
+    },
+    {
+        "id":"java",
+        "titulo":"Java",
+        "descricao":"Java é uma linguagem de programação popular e versátil. Ela é amplamente utilizada para o desenvolvimento de uma variedade de aplicativos, incluindo aplicativos web, desktop e móveis. Com sua sintaxe intuitiva e poderosas bibliotecas, Java permite aos desenvolvedores escrever código seguro, robusto e de alto desempenho. A plataforma Java também oferece recursos avançados, como gerenciamento automático de memória e suporte multiplataforma. Comunidade ativa e extensa documentação são outras vantagens do ecossistema Java.",
+        "icon":"BiLogoJava",
+        "filhos":[]
+    },
+    {
+        "id":"bancodedados",
+        "titulo":"Banco de Dados",
+        "descricao":"",
+        "icon":"AiFillDatabase",
+        "filhos":["sql", "nosql"]
+    },
+    {
+        "id":"sql",
+        "titulo":"SQL",
+        "descricao":"SQL (Linguagem de Consulta Estruturada) é uma linguagem de programação utilizada para trabalhar com banco de dados relacionais.",
+        "icon":"BsFiletypeSql",
+        "filhos":["mysql"]
+    },
+    {
+        "id":"mysql",
+        "titulo":"MySQL",
+        "descricao":"MySQL é um sistema de gerenciamento de banco de dados relacional amplamente utilizado. Ele fornece uma solução eficiente e escalável para armazenar, gerenciar e recuperar dados. O MySQL oferece suporte a consultas SQL poderosas, o que facilita a recuperação e manipulação de dados de forma flexível. Com recursos avançados, como transações ACID (Atomicidade, Consistência, Isolamento e Durabilidade) e índices eficientes, o MySQL garante a integridade e desempenho dos dados. É uma escolha popular para aplicativos web, empresas e projetos de todos os tamanhos. Sua comunidade ativa fornece suporte e uma variedade de recursos adicionais.",
+        "icon":"SiMysql",
+        "filhos":[]
+    },
+    {
+        "id":"nosql",
+        "titulo":"NoSQL",
+        "descricao":"NoSQL (Not Only SQL) é um termo genérico utilizado para descrever bancos de dados que não seguem o modelo relacional tradicional. Em vez disso, eles adotam diferentes modelos de armazenamento de dados, como documentos, grafos, chave-valor e colunas. Os bancos de dados NoSQL são projetados para lidar com grandes volumes de dados, escalabilidade horizontal e flexibilidade de esquema. Eles são amplamente utilizados em aplicativos modernos, como aplicações web, redes sociais e análise de big data. Os bancos de dados NoSQL oferecem alto desempenho e escalabilidade, mas podem exigir um planejamento cuidadoso do esquema e consultas específicas para aproveitar ao máximo seus recursos.",
+        "icon":"BiLogoMongodb",
+        "filhos":["mongodb"]
+    },
+    {
+        "id":"mongodb",
+        "titulo":"MongoDB",
+        "descricao":"MongoDB é um banco de dados NoSQL popular e de código aberto, baseado no modelo de armazenamento de documentos. Ele oferece alta escalabilidade e flexibilidade, permitindo que os desenvolvedores armazenem, acessem e manipulem dados de forma eficiente. O MongoDB armazena os dados em formato JSON-like chamado BSON (Binary JSON), o que facilita a integração com aplicativos modernos. Ele possui recursos avançados, como replicação automática, sharding para distribuição de dados e consultas ricas, incluindo índices geoespaciais. Além disso, o MongoDB oferece uma ampla variedade de recursos e integrações que permitem construir aplicações robustas e escaláveis.",
+        "icon":"BiLogoMongodb",
+        "filhos":[]
+    },
+
+    {
+         "id":"mobile",
+         "titulo":"Mobile",
+         "descricao": "",
+         "icon":"BiLogoReact",
+         "filhos":["react_native", "flutter"]
+    },
+    {
+        "id":"react_native",
+        "titulo":"React Native",
+        "descricao":"React Native é um framework de desenvolvimento de aplicativos móveis multiplataforma. Ele permite criar aplicativos nativos para iOS e Android usando JavaScript e a biblioteca React. Com o React Native, os desenvolvedores podem reutilizar o código entre as plataformas, acelerando o processo de desenvolvimento. Ele oferece uma abordagem baseada em componentes, onde cada componente é renderizado nativamente, proporcionando uma experiência de usuário rica e responsiva. Além disso, React Native permite acesso a recursos nativos do dispositivo, como câmera, geolocalização e notificações. É amplamente utilizado por desenvolvedores para criar aplicativos móveis eficientes e de alto desempenho.",
+        "icon":"BiLogoReact",
+        "filhos":[]
+   },
+   {
+        "id":"flutter",
+        "titulo":"Flutter",
+        "descricao":"Flutter é um framework de desenvolvimento de aplicativos móveis multiplataforma criado pelo Google. Ele permite criar aplicativos nativos para iOS, Android, web e desktop usando uma única base de código em Dart, uma linguagem de programação moderna e de alto desempenho. O Flutter utiliza widgets personalizáveis e oferece uma experiência de desenvolvimento rápida e fluida, com hot reload para visualizar instantaneamente as alterações no aplicativo. Ele também possui uma biblioteca rica de widgets e recursos que permitem criar interfaces de usuário bonitas e responsivas. Com sua abordagem de desenvolvimento rápido e a capacidade de oferecer uma experiência nativa em várias plataformas, o Flutter se tornou uma escolha popular para o desenvolvimento de aplicativos móveis.",
+        "icon":"BiLogoFlutter",
+        "filhos":[]
+    },
+    {
+        "id":"desktop",
+        "titulo":"Desktop",
+        "descricao":"",
+        "icon":"AiOutlineDesktop",
+        "filhos":["electronjs", ".net"]
+    },
+    {
+        "id":"electronjs",
+        "titulo":"ElectronJS",
+        "descricao":" Electron.js é um framework de código aberto que permite desenvolver aplicativos de desktop multiplataforma usando tecnologias web, como HTML, CSS e JavaScript. Ele fornece uma camada de abstração para criar interfaces gráficas utilizando o Chromium e o Node.js, permitindo criar aplicativos de desktop com uma experiência semelhante à web. Com o Electron.js, os desenvolvedores podem criar aplicativos para Windows, macOS e Linux de forma eficiente, compartilhando grande parte do código entre as plataformas.",
+        "icon":"IoLogoElectron",
+        "filhos":[]
+    },
+    {
+        "id":".net",
+        "titulo":".NET",
+        "descricao":".NET é um framework de desenvolvimento de software criado pela Microsoft. Ele oferece um ambiente de execução e um conjunto abrangente de bibliotecas e ferramentas para criar uma ampla variedade de aplicativos, incluindo aplicativos desktop, web e móveis. Com o .NET, os desenvolvedores podem usar várias linguagens de programação, como C#, F# e Visual Basic, para construir aplicativos robustos e escaláveis. Ele também inclui recursos avançados, como gerenciamento automático de memória, suporte à segurança, acesso a banco de dados e integração com outras tecnologias Microsoft. O .NET é amplamente adotado na indústria e possui uma grande comunidade de desenvolvedores ativos.",
+        "icon":"SiDotnet",
+        "filhos":[]
+   },
+   {
+       "id":"Processamento de dados / machine learning",
+       "titulo":"",
+       "descricao":"",
+       "icon":"",
+       "filhos":[]
+  },
+  {
+   "id":"Processamento_de_dados_machine_learning",
+   "titulo":"Processamento de dados / machine learning",
+   "descricao":"",
+   "icon":"FaRobot",
+   "filhos":["python_scikit_matplotlib", "r", "visao_computacional"]
+   },
+   {
+       "id":"python_scikit_matplotlib",
+       "titulo":"Python (scikit, matplotlib, etc)",
+       "descricao":"Python é uma linguagem de programação versátil e de alto nível amplamente utilizada. Possui uma sintaxe simples e legível, tornando-o popular entre os desenvolvedores. Python é conhecido por suas bibliotecas ricas e diversificadas, que permitem realizar uma ampla gama de tarefas. Algumas das principais bibliotecas incluem: NumPy: para computação numérica e manipulação de arrays multidimensionais. Pandas: para análise de dados e manipulação de estruturas de dados. Matplotlib: para visualização de dados em gráficos e plots. Scikit-learn: para aprendizado de máquina e mineração de dados. TensorFlow: para desenvolvimento de modelos de aprendizado de máquina e redes neurais. Django: para desenvolvimento web com foco em eficiência e escalabilidade. Flask: para criação de aplicativos web leves e flexíveis. Essas bibliotecas, entre outras, fazem do Python uma escolha poderosa para análise de dados, aprendizado de máquina, desenvolvimento web e muito mais.",
+       "icon":"BiLogoPython",
+       "filhos":[]
+   },
+   {
+       "id":"r",
+       "titulo":"R",
+       "descricao":" R é uma linguagem de programação amplamente utilizada no campo da análise de dados e estatística. Com uma sintaxe fácil de aprender e poderosas bibliotecas, é especialmente adequado para manipulação, visualização e modelagem de dados. Algumas das principais bibliotecas do R incluem o ggplot2, que é amplamente usado para visualização de dados; o dplyr, para manipulação eficiente de dados; o caret, para aprendizado de máquina e modelagem estatística; o tidyr, para limpeza e organização de dados; e o shiny, para a criação de aplicativos interativos baseados em R. Essas bibliotecas tornam o R uma escolha popular entre os cientistas de dados e estatísticos.",
+       "icon":"BsFillFileBarGraphFill",
+       "filhos":[]
+   },
+   {
+    "id":"visao_computacional",
+    "titulo":"Visão computacional",
+    "descricao":"",
+    "icon":"AiFillEye",
+    "filhos":["opencv"]
+},
+{
+   "id":"opencv",
+   "titulo":"OpenCV (Python, C++, Java",
+   "descricao":"OpenCV (Open Source Computer Vision Library) é uma biblioteca de código aberto amplamente utilizada para processamento de imagens e visão computacional. Ela oferece uma vasta gama de funções e algoritmos para detecção de objetos, reconhecimento facial, calibração de câmera, segmentação de imagem e muito mais. Com suporte a várias linguagens de programação, incluindo C++, Python e Java, o OpenCV é utilizado em uma variedade de aplicações, como visão industrial, realidade aumentada, veículos autônomos e robótica. É conhecido por sua eficiência, flexibilidade e capacidade de lidar com uma variedade de formatos de imagem e vídeo.",
+   "icon":"SiOpencv",
+   "filhos":[]
+},
+
+{
+    "id":"hardware",
+    "titulo":"Hardware",
+    "descricao":"",
+    "icon":"FcElectronics",
+    "filhos":["C++_arduino_esp32", "python_raspberrypi"]
+},
+{
+   "id":"C++_arduino_esp32",
+   "titulo":"C++ (Arduino / ESP32)",
+   "descricao":"C++ é uma linguagem de programação amplamente utilizada no desenvolvimento de firmware para Arduino e ESP32. Com C++, os desenvolvedores podem aproveitar recursos avançados, como a manipulação direta de memória e o acesso de baixo nível aos recursos do microcontrolador. C++ oferece suporte a orientação a objetos, permitindo a criação de classes e objetos para encapsular funcionalidades e promover a reutilização de código. Além disso, a vasta biblioteca padrão do C++ e as bibliotecas específicas para Arduino e ESP32 fornecem recursos adicionais para facilitar o desenvolvimento de projetos embarcados.",
+   "icon":"TbBrandCpp",
+   "filhos":[]
+},
+{
+   "id":"python_raspberrypi",
+   "titulo":"Python (RaspberryPi)",
+   "descricao":"Python é uma linguagem de programação muito popular para desenvolvimento no Raspberry Pi. Com sua sintaxe simples e legível, é uma escolha ideal para iniciantes e desenvolvedores que desejam realizar projetos de automação, IoT (Internet das Coisas) e experimentação no Raspberry Pi. O Raspberry Pi oferece suporte nativo ao Python e possui uma vasta comunidade que fornece bibliotecas e recursos específicos para interagir com os periféricos do Raspberry Pi, como GPIO (General Purpose Input/Output), câmera, sensores e displays. Além disso, o Python também é usado para criar interfaces de usuário, acessar APIs e realizar análise de dados em projetos baseados em Raspberry Pi.",
+   "icon":"BiLogoPython",
+   "filhos":[]
+},
+{
+    "id":"biologia",
+    "titulo":"Biologia",
+    "descricao":"",
+    "icon":"FaMicroscope",
+    "filhos":["biologia_celular_biologia_molecular", "bioquimica", "zoologia", "botanica", "ecologia", "evolucao", "genetica", "microbiologia"]
+},
+{
+    "id":"biologia_celular_biologia_molecular",
+    "titulo":"Biologia Celular / Biologia Molecular",
+    "descricao":"Descrição: A Biologia Celular é a área que estuda a função e estrutura das células. A Biologia Molecular está muito próxima da Celular, mas possui foco maior nos mecanismos moleculares do DNA, RNA e proteínas.\n\n Organização: Biologia Celular pode ser dividida no estudo interconectado de composição, comunicação, ciclo e metabolismo celulares.\n\n Recomendações de estudo: \n Fundamentos de Biologia Celular [B. Alberts] [4a ed.]\n Biologia Molecular da Célula [B. Alberts] [6a ed.]\n",
+    "icon":"GiChemicalDrop",
+    "filhos":[]
+},
+{
+    "id":"bioquimica",
+    "titulo":"Bioquímica",
+    "descricao":"Descrição: Estudo das moléculas e reações químicas que ocorrem em seres vivos.\n\n Organização: Pode ser dividida em três grandes áreas:\n Estrutura - Compreender como é a estrutura química de Aminoácidos, Proteínas, Enzimas, Carboidratos, Lipídeos e Ácidos Nucleicos, assim como sua relação com a suas respectivas funções biológicas.\n Energética e Metabolismo - Estudo dos mecanismos metabólicos que transformam energia nos seres vivos, incluindo Glicólise, Oxidação Fosforilativa, Respiração Celular, Fermentação, Fotossíntese, Glicogênese.\n Genética - Foco no metabolismo de DNA e RNA, desde síntese, enrolamento, replicação, recombinação, até a expressão gênica destes.\n Recomendações de estudo: \n\n Princípios de Bioquímica de Lehninger [David L. Nelson] [6a ed.]\n Princípios de Bioquímica: A vida em nível molecular [Donald Voet] [4a ed.]\n\n Recursos Úteis: \n Database de enzimas, suas reações químicas e caminhos metabólicos - https://www.brenda-enzymes.info/index.php\n Site com diversos assuntos de Química de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://chem.libretexts.org/\n",
+    "icon":"FaBacteria",
+    "filhos":[]
+},
+{
+    "id":"zoologia",
+    "titulo":"Zoologia",
+    "descricao":"Descrição: Estudo do reino animal.\n\n Organização: Essa área pode ser subdividida em Anatomia, Fisiologia, Comportamento, Evolução, Biodiversidade e Microbiologia, apesar de não se limitar a elas. Os livros de graduação, no entanto, tendem a dividir o estudo em Invertebrados e Vertebrados.\n\n Recomendações de estudo: \n Princípios Integrados de Zoologia [Hickman] [16a ed.]\n Invertebrates [Brusca] [2a ed.]\n A Vida dos Vertebrados [Pough] [4a ed.]\n\n",
+    "icon":"GiDinosaurRex",
+    "filhos":[]
+},
+{
+    "id":"botanica",
+    "titulo":"Botânica",
+    "descricao":"Descrição: Ciência que estuda as plantas.\n\n Organização: Pode ser dividida nas áreas de Fisiologia, Morfologia, Ecologia e Sistemática, apesar de também incluir citologia, histologia e anatomia como disciplinas correlatas, e ainda especializações como agronomia, biotecnologia, ciência dos alimentos e manejo de recursos naturais.\n\n Recomendações de estudo: \n Biologia Vegetal [Eichhorn; Raven] [8a ed.]\n Fisiologia Vegetal [Taiz; Zeiger] [5a ed.]\n",
+    "icon":"TbPlant",
+    "filhos":[]
+},
+{
+    "id":"ecologia",
+    "titulo":"Ecologia",
+    "descricao":"Descrição: É o estudo dos seres vivos, como eles interagem e como são influenciados entre si e com o ecossistema em que estão inseridos.\n\n Organização: Pode ser entendida em quatro diferentes níveis: organismo, população, comunidade e ecossistema. Também pode ser observada sob diferentes ênfases, como o comportamental, molecular, fisiológico e biogeográfico.\n\n Recomendações de estudo: \n Fundamentos de Ecologia [Townsend] [3a ed.]\n Ecologia [Cain] [3a ed.]\n",
+    "icon":"GiTreeBranch",
+    "filhos":[]
+},
+{
+    "id":"evolucao",
+    "titulo":"Evolução",
+    "descricao":"Descrição: Estudo dos processos evolutivos que originaram a diversidade.\n\n Organização: Envolve resumidamente Teorias Evolutivas, Mecanismos micro e macroevolutivos, e Filogenia/Sistemática.\n\n Recomendações de estudo: \n Análise Evolutiva [Freeman; Herron] [4a ed.]\n",
+    "icon":"GiHumanPyramid",
+    "filhos":[]
+},
+
+
+
+{
+    "id":"genetica",
+    "titulo":"Genética",
+    "descricao":"Descrição: Estudo dos genes e da hereditariedade.\n\n Organização: Algumas subdivisões incluem Teoria Mendeliana, Genômica, Parâmetros Genéticos-Estatísticos, Genética de Populações.\n\n Recomendações de estudo: \n Introdução à Genética [Griffiths] [11a ed.]\n",
+    "icon":"BiDna",
+    "filhos":[]
+},
+{
+    "id":"microbiologia",
+    "titulo":"Microbiologia",
+    "descricao":"Descrição: Estudo dos microrganismos.\n\n Organização: Pode ser estudada a partir da Morfologia, Nutrição, Metabolismo, Classificação e Controle. Além disso, engloba subáreas como Parasitologia, Micologia, Bacteriologia, Virologia, Protozoologia e Ficologia.\n\n Recomendações de estudo: \n Microbiologia de Brock [Madigan] [14a ed.]\n\n Recursos Úteis:\n Site com diversos assuntos de Biologia de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://bio.libretexts.org/\n",
+    "icon":"FaBacteria",
+    "filhos":[]
+},
+
+
+{
+    "id":"quimica",
+    "titulo":"Química",
+    "descricao":"",
+    "icon":"GiChemicalDrop",
+    "filhos":["bioquimicaChem"]
+},
+{
+    "id":"bioquimicaChem",
+    "titulo":"Bioquímica",
+    "descricao":"Descrição: Estudo das moléculas e reações químicas que ocorrem em seres vivos.\n\n Organização: Pode ser dividida em três grandes áreas:\n Estrutura - Compreender como é a estrutura química de Aminoácidos, Proteínas, Enzimas, Carboidratos, Lipídeos e Ácidos Nucleicos, assim como sua relação com a suas respectivas funções biológicas.\n Energética e Metabolismo - Estudo dos mecanismos metabólicos que transformam energia nos seres vivos, incluindo Glicólise, Oxidação Fosforilativa, Respiração Celular, Fermentação, Fotossíntese, Glicogênese.\n Genética - Foco no metabolismo de DNA e RNA, desde síntese, enrolamento, replicação, recombinação, até a expressão gênica destes.\n\n Recomendações de estudo: \n Princípios de Bioquímica de Lehninger [David L. Nelson] [6a ed.]\n Princípios de Bioquímica: A vida em nível molecular [Donald Voet] [4a ed.]\n\n Recursos Úteis: \n Database de enzimas, suas reações químicas e caminhos metabólicos - https://www.brenda-enzymes.info/index.php\n\n Recursos Úteis:\n Site com diversos assuntos de Química de acesso aberto e escrito de modo colaborativo. É didático, mas menos aprofundado - https://chem.libretexts.org/\n",
+    "icon":"FaBacteria",
+    "filhos":[]
+}
 ]
