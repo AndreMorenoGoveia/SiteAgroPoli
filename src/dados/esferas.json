@@ -57,7 +57,7 @@
     },
     {
         "id":"frontend",
-        "titulo":"FronEnd",
+        "titulo":"FrontEnd",
         "descricao":"Tecnologias utilizadas para a criação da interface gráfica de sites.",
         "icon":"CgScreen",
         "filhos":["react", "vue", "django", "angular"]
@@ -83,6 +83,13 @@
         "icon":"BiLogoDjango",
         "filhos":[]
    },
+   {
+        "id":"angular",
+        "titulo":"Angular",
+        "descricao":"Usado para construir aplicativos para web baseados em uma única página dinâmica.",
+        "icon":"FaAngular",
+        "filhos":[]
+    },
    {
         "id":"backend",
         "titulo":"Backend",
