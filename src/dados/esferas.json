@@ -11,7 +11,7 @@
         "titulo":"Software",
         "descricao":" ",
         "icon":"AiOutlineLaptop",
-        "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop"]
+        "filhos":["desenvolvimento_web", "processamento_de_dados_machine_learning", "bancodedados", "mobile", "desktop", "hardware"]
     },
     {
         "id":"desenvolvimento_web",
